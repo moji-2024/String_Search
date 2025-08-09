@@ -19,3 +19,5 @@ Clone the repository:
 ```bash
 git clone https://github.com/moji-2024/String_Search.git
 cd String_Search
+pip install -r requirements.txt
+
