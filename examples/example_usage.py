@@ -20,3 +20,17 @@ print('good Suffix Dictionary')
 print(match_obj.goodSuffixData)
 print("-------------------------------------")
 print(match_obj.findMatch(text))
+
+
+# Output:
+skipTable
+   G_8 C_7 G_6 G_5 C_4 G_3 A_2 T_1 G_0
+A   5   4   3   2   1   0   -   1   0
+T   6   5   4   3   2   1   0   -   0
+C   0   -   1   0   -   3   2   1   0
+G   -   0   -   -   0   -   1   0   -
+goodSuffixData
+ {'G': 1, 'CG': 2, 'GCG': 2, 'GGCG': 7, 'CGGCG': 7, 'GCGGCG': 7, 'AGCGGCG': 7, 'TAGCGGCG': 7, 'GTAGCGGCG': 7}
+index first matches
+ [763]
+GTAGCGGCG
