@@ -22,4 +22,4 @@ cd String_Search
 pip install -r requirements.txt
 
 ## usage
-[See how to use](examples/example_usage.py)
+[See how to use](../examples/example_usage.py)
