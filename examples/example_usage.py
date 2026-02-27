@@ -11,16 +11,15 @@ NAGNNTTTTAGGGCCAGGNNCGCCTGACNNANNTGAGACCNNNNNGGNNNNGNNNNNNANAGAAAAACCATGGCCCCGAC
 GGGTGTCNCNCCCCTGNNCTNNGTCGNNATGNGNGTAGCGGCGTNTTNTGTCNNNCTNCNNNANGNGNNNNNGNNNNNNNNNTCCCTGC
 GGCANNNCNACNNNNNNNNNTNNCNTGNTNANCGTGCNNNNNNNANTNNNANNGNNNNNCCCNNGTTTNTTTGNNNANTT
 TNNNNNNANNNGCNGTAGCGGCGNNNNTTNNNNNNNNNN'''
-patt = 'GTAGCGGCG'
-match_obj = boyer_moore.badChar_goodSufixRuls(patt)
-print('skipTable')
-print(match_obj.skipTable)
+pattern = 'GTAGCGGCG'
+match_obj = boyer_moore.badChar_goodSufixRuls(pattern)
+print('skipTable\n',match_obj.skipTable)
 print("-------------------------------------")
-print('good Suffix Dictionary')
-print(match_obj.goodSuffixData)
+print('goodSuffixData\n',match_obj.goodSuffixData)
 print("-------------------------------------")
-print(match_obj.findMatch(text))
-
+print('index first matches\n',match_obj.findMatch(text))
+for match in match_obj.findMatch(text):
+    print(text[match:match+len(pattern)])
 
 # Output:
 skipTable
@@ -32,5 +31,6 @@ G   -   0   -   -   0   -   1   0   -
 goodSuffixData
  {'G': 1, 'CG': 2, 'GCG': 2, 'GGCG': 7, 'CGGCG': 7, 'GCGGCG': 7, 'AGCGGCG': 7, 'TAGCGGCG': 7, 'GTAGCGGCG': 7}
 index first matches
- [763]
+ [763, 899]
+GTAGCGGCG
 GTAGCGGCG
