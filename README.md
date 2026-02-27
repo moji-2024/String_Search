@@ -21,3 +21,5 @@ git clone https://github.com/moji-2024/String_Search.git
 cd String_Search
 pip install -r requirements.txt
 
+## usage
+[Watch the demo on YouTube](examples/example_usage.py)
